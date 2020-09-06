@@ -1,0 +1,118 @@
+.footer {
+    position: fixed;
+    display:flex;
+    justify-content:center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
+
+ body{
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background-size: 50px 50px;
+    margin:0;
+    padding:0;
+    font-family: 'K2D', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  overflow-y: hidden;
+}
+
+.box-centerside {
+  width: 400px;
+  margin: 0 auto;
+  padding: 4px 15px;
+  font-size: 22px;
+  background:#282828;
+  text-align: center;
+  box-shadow: 0 6px 6px;
+  }
+  #text p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    
+    color:white;
+  }
+  
+  #author h5 {
+    font-family: cursive;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    color: gray;
+  }
+  .button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    cursor: pointer;
+    
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    
+    color: #fff;
+  
+    background: #8A2387; 
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    outline: none;
+    padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+    
+  }
+
+button:hover {
+  filter: brightness(110%);
+  border: none;
+  outline:0;
+
+}
+button:focus {
+  filter: brightness(110%);
+  border: none;
+  outline:0;
+}
+
+button:active {
+  border: none; 
+  transform: translate(0, 0.3rem);
+
+}
+
+  .twitter-button:hover {
+    color: #38a1f3;
+  }
+  
+  .fa-twitter {
+    font-size: 1.5rem;
+    color: #38a1f3;
+  }
+    .twitter-button{
+      background:none;
+    }
+  @media only screen and (max-width: 450px) {
+    .title {
+      font-size: 20px;
+    }
+    .box-centerside {
+      width: 270px;
+    }
+    #text p{
+      font-size:15px;
+    }
+    #author h5{
+      font-size:15px;
+    }
+  }
+  
