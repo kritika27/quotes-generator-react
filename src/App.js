@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="box-centerside">
         <div id="text">
-          <p style={{ textAlign: "center" }}>"{this.state.quotes.content}"</p>
+          <p style={{ textAlign: "center" }}>{this.state.quotes.content}</p>
         </div>
         <div id="author">
           <h5 style={{ textAlign: "center" }}>{this.state.quotes.author}</h5>
