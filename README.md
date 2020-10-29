@@ -2,14 +2,15 @@
 
 ## Description
 
-This is a simple Quotes Generator web application built using Html,CSS,ReactJS and Quotes API.I made this simple web application to practice React concepts. It generates random Motivational Quotes on clicking the button in teh Application.
+This is a simple Quotes Generator web application built using Html,CSS,ReactJS and Quotes API.I made this simple web application to practice React concepts. It generates random Motivational Quotes on clicking the button in the Application.
 
 ## Demo
-Link 👉 https://suspicious-ritchie-bdc165.netlify.app/
+
+Link 👉 https://dazzling-snyder-2f0503.netlify.app/
 
 ## Screenshot
 
-![screenshot](https://user-images.githubusercontent.com/4997491/92323999-01bbda80-f05b-11ea-8e42-00592eafc044.PNG)
+![screenshot](https://user-images.githubusercontent.com/4997491/97540666-f8f7dd00-19e9-11eb-874a-63f2ec11ef3b.PNG)
 
 ## Installation
 
@@ -24,10 +25,9 @@ HACK AWAY! 🔨🔨🔨
 
 In the project directory, you can run:
 
- `npm start`
+`npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Made with ❤ 
-
+Made with ❤
