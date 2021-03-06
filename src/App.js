@@ -1,59 +1,47 @@
-import React, { Component } from "react";
-import "./index.css";
+import React, { useState, useEffect } from "react";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      quotes: {},
-    };
-  }
+const url = "https://api.quotable.io/random";
 
-  tweetQuote() {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${this.state.quotes.content} - ${this.state.quotes.author}`;
-    window.open(twitterUrl, "_blank");
-  }
+const App = () => {
+  const [quotes, setQuotes] = useState([]);
 
-  componentDidMount() {
-    this.getQuote();
-  }
-
-  getQuote() {
-    fetch("https://api.quotable.io/random")
+  //Fetch Quotes from API
+  const getQuote = () => {
+    fetch(url)
       .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          quotes: data,
-        });
-      });
-  }
-
-  getNewQuote = () => {
-    this.getQuote();
+      .then((data) => setQuotes(data));
   };
 
-  render() {
-    return (
-      <div className="box-centerside">
-        <div id="text">
-          <p style={{ textAlign: "center" }}>{this.state.quotes.content}</p>
-        </div>
-        <div id="author">
-          <h5 style={{ textAlign: "center" }}>{this.state.quotes.author}</h5>
-          <div className="button-container">
-            <button
-              className="twitter-button"
-              onClick={() => this.tweetQuote()}
-            >
-              <i className="fab fa-twitter"></i>
-            </button>
+  useEffect(() => {
+    getQuote();
+  }, []);
 
-            <button onClick={this.getNewQuote}>New Quote</button>
-          </div>
+  const getNewQuote = () => {
+    getQuote();
+  };
+
+  const tweetQuote = () => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quotes.content} - ${quotes.author}`;
+    window.open(twitterUrl, "_blank");
+  };
+
+  const { content, author } = quotes;
+  return (
+    <div className="box-centerside">
+      <div className="text">
+        <p>{content}</p>
+      </div>
+      <div className="author">
+        <h5>{author}</h5>
+        <div className="button-container">
+          <button className="twitter-button" onClick={tweetQuote}>
+            <i className="fab fa-twitter"></i>
+          </button>
+          <button onClick={getNewQuote}>New Quote</button>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;

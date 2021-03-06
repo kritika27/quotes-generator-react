@@ -1,14 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-//import Quote from "./Quote";
 import App from "./App";
-import Footer from "./Footer";
+import "./index.css";
 
-ReactDOM.render(
-  <>
-    <App />
-    <Footer />
-  </>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
